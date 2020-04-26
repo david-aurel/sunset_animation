@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+}
+.sun {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    animation: sun 5s infinite;
+}
+.sky {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+    background: linear-gradient(176deg, lightskyblue, darkred, black) center / 100% 1000%;
+    height: 50%;
+    width: 100%;
+    animation: sky 5s infinite;
+}
+.water {
+    background: darkblue;
+    height: 50%;
+    width: 100%px;
+}
+
+@keyframes sun {
+    0%,
+    20%,
+    100% {
+        transform: translateY(100%);
+        background: rgb(197, 46, 0);
+    }
+    50%,
+    60% {
+        transform : translateY(-20vh);
+        background: rgb(255, 196, 0);
+    }
+}
+@keyframes sky {
+    0%, 20%, 100% {
+        background-position-y: 100%;
+    }
+    50%, 60% {
+        background-position-y: 00%;
+}
